@@ -5,6 +5,7 @@ import './index.css'
 
 import {
   createBrowserRouter,
+  Link,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
@@ -17,6 +18,7 @@ import Friends from './components/Friends/Friends';
 import FriendsDetails from './components/Friends/FriendsDetails/FriendsDetails';
 import Posts from './components/Posts/Posts';
 import PostDetails from './components/Posts/PostDetails/PostDetails';
+import Error from './components/Error';
 
 // const router = createBrowserRouter([
 //   {
@@ -73,7 +75,13 @@ const router = createBrowserRouter([{
       path: 'post/:postId',
       element: <PostDetails></PostDetails>,
       loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`) 
+    },
+    {
+      path: '*',
+      element: <Error></Error>
+
     }
+
   ]
 
 }])
