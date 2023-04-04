@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ActiveLink from '../ActiveLink/ActiveLink';
+import './Header.css'
 
 const Header = () => {
     return (
-        <nav className='my-3 bg-blue-300 py-4'>
+        <nav className=' bg-blue-300 py-4 px-3'>
             
-            <Link className='ml-5 hover:bg-blue-500 hover:text-blue-100 bg-blue-400 rounded-md px-2 py-1' to="/">Home</Link>
-            <Link className='ml-5 hover:bg-blue-500 hover:text-blue-100 bg-blue-400 rounded-md px-2 py-1' to="/about">About</Link>
-            <Link className='ml-5 hover:bg-blue-500 hover:text-blue-100 bg-blue-400 rounded-md px-2 py-1' to="/contact">Contact</Link>
-            <Link to="/friends" className='ml-5 hover:bg-blue-500 hover:text-blue-100 bg-blue-400 rounded-md px-2 py-1'>Friends</Link>
-            <Link  className='ml-5 hover:bg-blue-500 hover:text-blue-100 bg-blue-400 rounded-md px-2 py-1' to="/posts" >Posts</Link>
+            <ActiveLink  to="/"><span className='mr-3'>Home</span>  </ActiveLink>
+            <ActiveLink  to="/about"><span className='mr-3'>About</span>  </ActiveLink>
+            <ActiveLink  to="/contact"><span className='mr-3'>Contact</span>  </ActiveLink>
+            <ActiveLink to="/friends" ><span className='mr-3'>Friends</span>  </ActiveLink>
+            <ActiveLink  to="/posts" ><span className='mr-3'>Posts</span></ActiveLink>
         </nav>
     );
 };

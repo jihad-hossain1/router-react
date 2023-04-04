@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SinglePost = ({postLoad}) => {
-    console.log(postLoad);
-    const { body, id , title, userId} = postLoad;
+    // console.log(postLoad);
+    const { body, id, title, userId } = postLoad;
+
+
 
     return (
         <div className='bg-blue-100 rounded p-2 m-1'>
